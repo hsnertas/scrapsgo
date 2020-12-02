@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>SCRAPSGO</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <a data-sr="scale up 10%" href="http://Scrapsgo.com">Scrapsgo.com</a>
+        <span data-sr="top wait .3s 90px">i</span>
+        <span data-sr="top wait .4s 90px">s</span>
+        <span>&nbsp;</span>
+        <span data-sr="top wait .5s 90px">c</span>
+        <span data-sr="top wait .6s 90px">o</span>
+        <span data-sr="top wait .7s 90px">m</span>
+        <span data-sr="top wait .8s 90px">i</span>
+        <span data-sr="top wait .9s 90px">n</span>
+        <span data-sr="top wait 1s 90px">g</span>
+        <span>&nbsp;</span>
+        <span data-sr="top wait 1.1s 90px">s</span>
+        <span data-sr="top wait 1.2s 90px">o</span>
+        <span data-sr="top wait 1.3s 90px">o</span>
+        <span data-sr="top wait 1.4s 90px">n</span>
+        <span data-sr="top wait 1.5s 90px">!</span>
+      </h1>
+      <p data-sr="bottom wait 1.5s 90px">
+        Please check back with us in the near future for updates.
+      </p>
+    </div>
+    <script>
+      // Scroll Reveal
+      window.sr = new scrollReveal(config);
+
+      var config = {
+        easing: 'ease',
+        reset: true,
+      }(
+        // Font Settings
+        function (d) {
+          var config = {
+              kitId: 'xyl8bgh',
+              scriptTimeout: 3000,
+            },
+            h = d.documentElement,
+            t = setTimeout(function () {
+              h.className =
+                h.className.replace(/\bwf-loading\b/g, '') + ' wf-inactive';
+            }, config.scriptTimeout),
+            tk = d.createElement('script'),
+            f = false,
+            s = d.getElementsByTagName('script')[0],
+            a;
+          h.className += ' wf-loading';
+          tk.src = '//use.typekit.net/' + config.kitId + '.js';
+          tk.async = true;
+          tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || (a && a != 'complete' && a != 'loaded')) return;
+            f = true;
+            clearTimeout(t);
+            try {
+              Typekit.load(config);
+            } catch (e) {}
+          };
+          s.parentNode.insertBefore(tk, s);
+        }
+      )(document);
+    </script>
+  </body>
+</html>
